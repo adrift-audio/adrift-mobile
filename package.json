@@ -1,16 +1,35 @@
 {
+  "name": "adrift-mobile",
+  "version": "1.0.0",
+  "description": "Adrift mobile application",
+  "private": true,
+  "author": {
+    "name": "Peter Dyumin",
+    "url": "https://github.com/peterdee"
+  },
+  "homepage": "https://github.com/adrift-audio/adrift-mobile",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
     "eject": "expo eject",
-    "test": "jest --watchAll"
+    "ios": "expo start --ios",
+    "lint": "eslint",
+    "start": "expo start",
+    "web": "expo start --web"
   },
-  "jest": {
-    "preset": "jest-expo"
+  "engines": {
+    "node": "~16.0.0",
+    "npm": "~7.10.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrift-audio/adrift-mobile"
+  },
+  "keywords": [
+    "Adrift",
+    "Expo"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@expo/vector-icons": "^12.0.0",
     "@react-native-community/masked-view": "0.1.10",
@@ -28,8 +47,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-reanimated": "~2.1.0",
     "react-native-gesture-handler": "~1.10.2",
+    "react-native-reanimated": "~2.1.0",
     "react-native-safe-area-context": "3.2.0",
     "react-native-screens": "~3.0.0",
     "react-native-web": "~0.13.12"
@@ -38,8 +57,14 @@
     "@babel/core": "^7.9.0",
     "@types/react": "~16.9.35",
     "@types/react-native": "~0.63.2",
-    "jest-expo": "~41.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.22.0",
+    "@typescript-eslint/parser": "^4.22.0",
+    "eslint": "^7.24.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "typescript": "~4.0.0"
-  },
-  "private": true
+  }
 }
