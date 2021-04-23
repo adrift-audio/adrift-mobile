@@ -12,6 +12,9 @@
       "image": "./assets/images/splash.png",
       "resizeMode": "cover"
     },
+    "experiments": {
+      "turboModules": true
+    },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
