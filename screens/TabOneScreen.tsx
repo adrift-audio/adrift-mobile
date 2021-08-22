@@ -1,14 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-
-export default function TabOneScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} />
-    </View>
-  );
-}
+import { WebView } from 'react-native-webview';
 
 const styles = StyleSheet.create({
   container: {
@@ -25,4 +17,23 @@ const styles = StyleSheet.create({
     height: 1,
     width: '80%',
   },
+  webView: {
+    display: 'none',
+    height: 0,
+    width: 0,
+  },
 });
+
+export default function TabOneScreen() {
+  return (
+    <View style={styles.container}>
+      <WebView
+        originWhitelist={['*']}
+        source={{ html: '<h1>This is a static HTML source!</h1>' }}
+        style={styles.webView}
+      />
+      <Text style={styles.title}>Tab One</Text>
+      <View style={styles.separator} />
+    </View>
+  );
+}
